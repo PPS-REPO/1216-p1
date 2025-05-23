@@ -225,5 +225,6 @@
     "versions": {
         "config": 1,
         "repository": 1
-    }
+    },
+    "deploy_uuid": "51ada24e-24c5-4d26-9e9d-ec67a85eb806"
 }
