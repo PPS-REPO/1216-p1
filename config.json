@@ -5,7 +5,7 @@
     "checker_language": "cpp11",
     "validator": "validator.cc",
     "validator_language": "cpp11",
-    "subtask": true,
+    "subtask": false,
     "limits": {
         "time": 1000,
         "memory": 536870912,
