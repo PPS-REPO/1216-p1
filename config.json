@@ -54,17 +54,10 @@
     "subtask_group": [],
     "genscript": [
         {
-            "script": "manual.py",
-            "subtask_group": "",
-            "description": "예제로 사용될 데이터 2번입니다.",
-            "is_example": true,
-            "only_deploy": false
-        },
-        {
             "script": "generator.cc",
             "subtask_group": "",
             "description": "",
-            "is_example": false,
+            "is_example": true,
             "only_deploy": false
         },
         {
