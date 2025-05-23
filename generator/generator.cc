@@ -27,7 +27,7 @@ string random_string_with_pattern(const string& pattern, int maxlen) {
 int main(int argc, char* argv[]) {
     registerGen(argc, argv, 1);
 
-    const int maxlen = 9;
+    const int maxlen = 100;
     string s = random_string_with_pattern(rnd.next(2) ? "Sumin" : "Minsu", maxlen);
     println(s);
 }
