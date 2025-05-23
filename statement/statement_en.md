@@ -9,7 +9,7 @@ Help Sungwon by writing a program that determines which of the two substrings ap
 # Input
 
 The first line contains a string $S$.
-* $1 \le |S| \le 9$
+* $1 \le |S| \le 100$
 
 # Output
 
