@@ -46,7 +46,7 @@
     ],
     "generators": [
         {
-            "name": "manual.py",
+            "name": "generator_manual.py",
             "language": "py3",
             "alias": "random_py"
         },
