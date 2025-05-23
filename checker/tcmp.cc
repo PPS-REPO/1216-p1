@@ -1,29 +1,20 @@
 #include "testlib.h"
- 
 using namespace std;
- 
+
 int main(int argc, char** argv) {
-    setName("token compare");
     registerTestlibCmd(argc, argv);
- 
-    int n = 0;
-    string j, p;
- 
-    for (; !ans.seekEof() && !ouf.seekEof(); ) {
-        ++n;
- 
-        ans.readWordTo(j);
-        ouf.readWordTo(p);
-        
-        if (j != p) quitf(_wa, "%d%s words differ - expected: '%s', found: '%s'", n, englishEnding(n).c_str(), compress(j).c_str(), compress(p).c_str());
-    }
- 
-    if (ans.seekEof() && ouf.seekEof()) {
-        if (n == 1) quitf(_ok, "\"%s\"", compress(j).c_str());
-        else quitf(_ok, "%d tokens", n);
-    }
-    else {
-        if (ans.seekEof()) quitf(_wa, "Participant output contains extra tokens");
-        else quitf(_wa, "Unexpected EOF in the participants output");
-    }
+
+    string expected = ans.readWord();
+    string actual = ouf.readWord();
+
+    if (actual != "Sumin" && actual != "Minsu")
+        quitf(_wa, "Output must be either 'Sumin' or 'Minsu', found: '%s'", compress(actual).c_str());
+
+    if (actual != expected)
+        quitf(_wa, "Wrong answer - expected: '%s', found: '%s'", compress(expected).c_str(), compress(actual).c_str());
+
+    if (!ouf.seekEof())
+        quitf(_wa, "Extra output found after the answer: '%s'", compress(ouf.readWord()).c_str());
+
+    quitf(_ok, "Correct: \"%s\"", compress(actual).c_str());
 }
