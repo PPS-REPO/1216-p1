@@ -1,16 +1,16 @@
 # Problem
 
-You are given two integers $a$ and $b$.
+Sumin and Minsu are arguing about whether the string "Sumin" or the string "Minsu" appears more frequently in a given string $S$.
 
-Print $a + b$.
+To avoid the argument from escalating, Sungwon wants to create a program that determines whether "Sumin" or "Minsu" appears more often in the string $S$. However, Sungwon’s programming skills are poor, so you need to write the program for him.
+
+Help Sungwon by writing a program that determines which of the two substrings appears more frequently in $S$.
 
 # Input
 
-The first line of input contains two integers $a$ and $b$ separated by a space.
-
-* $1 \le a \le 9$
-* $1 \le b \le 9$
+The first line contains a string $S$.
+* $1 \le |S| \le 9$
 
 # Output
 
-Print $a + b$ on the first line of output.
+Print "Sumin" if the string "Sumin" appears more frequently in $S$, or "Minsu" if "Minsu" appears more frequently.
